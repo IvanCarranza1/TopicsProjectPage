@@ -32,9 +32,9 @@ function loginUser({ email, password }) {
 // Si esta autenticado, valida el tipo de usuario haciendo una consulta en la BD.
 function handleAuthState(user) {
     if (user) {
-        //successfulMessage()
+        successfulMessage()
         setSuccesLoginButton()
-        signoutUser()
+        //signoutUser()
     }
 }
 //Mensaje de login exitoso
