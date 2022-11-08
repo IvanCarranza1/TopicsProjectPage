@@ -1,0 +1,43 @@
+.sidebar-dark-blue{
+    background: #06283D !important;
+  }
+
+  .bg-cards{
+    background: #1363DF;
+  }
+
+.whiteTextColor{
+    color: white;
+}
+
+.defaultButtonUpdateRegister{
+  background-color: #06283D !important;
+  color: white !important;
+}
+.centeredTextInput { 
+  text-align: center; 
+}
+
+.requiredValue:after {
+    content:" *";
+    color: red;
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input { 
+  text-align: center; 
+}
+
+
+
+  

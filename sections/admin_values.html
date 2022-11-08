@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Advanced form elements</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../AdminLTE/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/bs-stepper/css/bs-stepper.min.css">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/dropzone/min/dropzone.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../AdminLTE/dist/css/adminlte.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../AdminLTE/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
+
+    <!-- Dashboard style-->
+    <link rel="stylesheet" href="../css/dashBoardStyle.css">
+        
+    <!-- Loader-->
+    <link rel="stylesheet" href="../css/loader.css">
+</head>
+
+<body class="hold-transition sidebar-mini" class="hold-transition sidebar-mini" onload="loadPage()" style="margin:0;">
+  <div id="loader"></div>
+  <div style="display:none;" id="contentView">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../../index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+  
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+  
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-blue elevation-4">
+     <!-- Brand Logo -->
+     <a href="../home.html" class="brand-link">
+      <span class="brand-text font-weight-light">Panel de administración</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/images/avatar.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info" id="EmployeeInfo" style="color: white;">
+          Administador
+        </div>
+      </div>
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item">
+                <a href="../home.html" class="nav-link">
+                    <i class="fas fa-house-user nav-icon"></i>
+                  <p>
+                    Home
+                  </p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="classesManagement.html" class="nav-link">
+                    <i class="fas fa-book-open nav-icon"></i>
+                  <p>
+                    Datos de rutas
+                  </p>
+                </a>
+              </li>
+
+            </li>
+            <li class="nav-item">
+             <a href="classesManagement.html" class="nav-link">
+                 <i class="fas fa-book-open nav-icon"></i>
+               <p>
+                 Valores administrativos
+               </p>
+             </a>
+           </li>
+
+               <li class="nav-item">
+                <a href="#" class="nav-link" onclick="signoutUser()">
+                    <i class="fas fa-arrow-circle-left nav-icon"></i>
+                  <p>
+                    Cerrar sesión
+                  </p>
+                </a>
+              </li>
+         
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+    </aside>
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" id="mainContainer">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-10 ml-5">
+  
+              <div class="card" >
+                <div class="card-header bg-cards">
+                  <h3 class="card-title" style="color: white;">Valores</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row ml-2 mt-2">
+                    <div class="col-4 mt-1" >
+                      <label for="inpuTravelStimatedTime">Tiempo estimado de viaje</label>
+                    </div>
+                    <div class="col-3">
+                      <input id="inpuTravelStimatedTime" type="number" class="form-control">
+                    </div>
+                    <div class="col-3 ml-5">
+                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()" >Establecer valor</button> 
+                    </div>
+                  </div>
+                  <div class="row ml-2 mt-2">
+                    <div class="col-4 mt-1">
+                      <label for="inputLimitPunishTime">Tiempo de holgura</label>
+                    </div>
+                    <div class="col-3">
+                      <input id="inputLimitPunishTime" type="number" class="form-control">
+                    </div>
+                    <div class="col-3 ml-5">
+                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()">Establecer valor</button> 
+                    </div>
+                  </div>
+                  <div class="row  ml-2 mt-2">
+                    <div class="col-4 mt-1" >
+                      <label for="inpuTotalTravelPunish">Vueltas suspención</label>
+                    </div>
+                    <div class="col-3">
+                      <input id="inpuTotalTravelPunish" type="number" class="form-control">
+                    </div>
+                    <div class="col-3 ml-5">
+                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()">Establecer valor</button> 
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!--/.col (right) -->
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+  </div>
+  <!-- ./wrapper -->
+  </div>
+
+
+<!-- jQuery -->
+<script src="../AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../AdminLTE/dist/js/adminlte.min.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="../AdminLTE/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="../dist/js/dbConnection.js"> </script>
+<script src="../dist/js/sections/admin_values.js"> </script>
+
+</body>
+</html>
