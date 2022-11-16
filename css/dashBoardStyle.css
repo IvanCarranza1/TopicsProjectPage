@@ -38,6 +38,10 @@ input {
   text-align: center; 
 }
 
+#map {
+  height: 550px;
+}
+
 
 
   
