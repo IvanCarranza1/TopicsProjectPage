@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Advanced form elements</title>
+  <title>Datos de rutas</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -115,7 +115,7 @@
                 </a>
               </li>
                <li class="nav-item">
-                <a href="drivers_info.html" class="nav-link">
+                <a href="drivers_info.html" class="nav-link active">
                     <i class="fas fa-book-open nav-icon"></i>
                   <p>
                     Datos de rutas
@@ -125,7 +125,7 @@
 
             </li>
             <li class="nav-item">
-             <a href="admin_values.html" class="nav-link active">
+             <a href="admin_values.html" class="nav-link">
                  <i class="fas fa-book-open nav-icon"></i>
                <p>
                  Valores administrativos
@@ -154,57 +154,33 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid">
-          <div class="row mb-2">
-            <!--/.col (left) -->
-            <!-- right column -->
-            <div class="col-md-10 ml-5">
-  
-              <div class="card" >
-                <div class="card-header bg-cards">
-                  <h3 class="card-title" style="color: white;">Valores</h3>
-                </div>
-                <div class="card-body">
-                  <div class="row ml-2 mt-2">
-                    <div class="col-4 mt-1" >
-                      <label for="inpuTravelStimatedTime">Tiempo estimado de viaje</label>
-                    </div>
-                    <div class="col-3">
-                      <input id="inpuTravelStimatedTime" type="number" class="form-control">
-                    </div>
-                    <div class="col-3 ml-5">
-                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()" >Establecer valor</button> 
-                    </div>
-                  </div>
-                  <div class="row ml-2 mt-2">
-                    <div class="col-4 mt-1">
-                      <label for="inputLimitPunishTime">Tiempo de holgura</label>
-                    </div>
-                    <div class="col-3">
-                      <input id="inputLimitPunishTime" type="number" class="form-control">
-                    </div>
-                    <div class="col-3 ml-5">
-                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()">Establecer valor</button> 
-                    </div>
-                  </div>
-                  <div class="row  ml-2 mt-2">
-                    <div class="col-4 mt-1" >
-                      <label for="inpuTotalTravelPunish">Vueltas suspención</label>
-                    </div>
-                    <div class="col-3">
-                      <input id="inpuTotalTravelPunish" type="number" class="form-control">
-                    </div>
-                    <div class="col-3 ml-5">
-                      <button type="button" class="btn defaultButtonUpdateRegister" onclick="showAConfirmationlert()">Establecer valor</button> 
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
+                    <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Bordered Table</h3>
               </div>
-              <!-- /.card -->
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 10px">Unidad</th>
+                      <th>Nombre</th>
+                      <th>Hora de inicio</th>
+                      <th>Hora de término</th>
+                      <th>Ruta</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <!--/.col (right) -->
+            <!-- /.card -->
           </div>
-          <!-- /.row -->
+          <!-- /.col -->
+        </div>
         </div><!-- /.container-fluid -->
       </section>
       <!-- /.content -->
@@ -228,9 +204,10 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
 <script src="../dist/js/dbConnection.js"> </script>
-<script src="../dist/js/sections/admin_values.js"> </script>
+<script src="../dist/js/sections/drivers_info.js"> </script>
 
 </body>
 </html>
