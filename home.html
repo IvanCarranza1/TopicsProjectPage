@@ -109,7 +109,7 @@
                with font-awesome or any other icon font library -->
                <li class="nav-item">
                 <a href="../home.html" class="nav-link active">
-                    <i class="fas fa-house-user nav-icon"></i>
+                    <i class="fas fa-map nav-icon"></i>
                   <p>
                     Home
                   </p>
@@ -117,7 +117,7 @@
               </li>
                <li class="nav-item">
                 <a href="sections/drivers_info.html" class="nav-link">
-                    <i class="fas fa-book-open nav-icon"></i>
+                    <i class="fas fa-clock nav-icon"></i>
                   <p>
                     Datos de rutas
                   </p>
@@ -127,7 +127,7 @@
             </li>
             <li class="nav-item">
              <a href="sections/admin_values.html" class="nav-link">
-                 <i class="fas fa-book-open nav-icon"></i>
+                 <i class="fas fa-wrench nav-icon"></i>
                <p>
                  Valores administrativos
                </p>
@@ -272,6 +272,20 @@ function AddCarFirstSense(data) {
         map: map
     });
 
+    var TST = new Date(data.val().time_start_travel)
+
+var infowindow = new google.maps.InfoWindow({
+    content:     
+    '<div id="content">' +
+    `</div>` +
+    `<h5 id="firstHeading" class="firstHeading">Unidad ${data.val().unityID}</h5>` +
+    `<p><Strong>Conductor:</Strong> ${data.val().driver_name}</p>`+
+    `<p><Strong>Hora de inicio del viaje:</Strong> ${TST.getHours() + ":" + TST.getMinutes()}</p>`+
+    `</div>` +
+    `</div>`
+              });
+makeInfoWindowEvent(second_map, infowindow, marker);
+
     markers_first_map[data.key] = marker; // add marker in the markers array...
 }
 
@@ -295,6 +309,20 @@ var marker = new google.maps.Marker({
     icon: icon,
     map: second_map
 });
+
+var TST = new Date(data.val().time_start_travel)
+
+var infowindow = new google.maps.InfoWindow({
+    content:     
+    '<div id="content">' +
+    `</div>` +
+    `<h5 id="firstHeading" class="firstHeading">Unidad ${data.val().unityID}</h5>` +
+    `<p><Strong>Conductor:</Strong> ${data.val().driver_name}</p>`+
+    `<p><Strong>Hora de inicio del viaje:</Strong> ${TST.getHours() + ":" + TST.getMinutes()}</p>`+
+    `</div>` +
+    `</div>`
+              });
+makeInfoWindowEvent(second_map, infowindow, marker);
 
 markers_second_map[data.key] = marker; // add marker in the markers array...
 }
@@ -341,6 +369,12 @@ cars_Ref_Second_Sense.on('child_removed', function (data) {
     console.log("FFF")
     markers_second_map[data.key].setMap(null);
 });
+
+function makeInfoWindowEvent(map, infowindow, marker) {
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map, marker);
+  });
+}
 
 </script>
 

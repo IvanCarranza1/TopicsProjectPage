@@ -1,5 +1,4 @@
 function loadPage(){
-  showPage()
 }
 
 function showPage() {
