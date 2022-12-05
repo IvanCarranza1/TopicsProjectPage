@@ -1,3 +1,5 @@
+const db = firebase.firestore();
+
 function loadPage(){
 }
 
